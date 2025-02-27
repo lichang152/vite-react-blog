@@ -1,0 +1,8 @@
+.app_url {
+    display: flex;
+    padding: 0 20%;
+    justify-content: space-between;
+    list-style-type: none;
+  
+  }
+  

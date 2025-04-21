@@ -11,8 +11,13 @@ import StaticMap from "./example/staticMap";
 import VectorMap from "./example/vectorMap"; 
 import GetAllLoadFeatures from "./example/getAllLoadFeatures"; 
 import CoordinateTransFormMap from "./example/coordinateTransFormMap"; 
+import LayerManageMap from "./example/layerManageMap"; 
 // 地图工具
 const mapList = [
+  {
+    name: "图层管理",
+    component: LayerManageMap,
+  },
   {
     name: "坐标转换",
     component: CoordinateTransFormMap,

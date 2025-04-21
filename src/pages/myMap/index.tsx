@@ -8,8 +8,13 @@ import LimitZoomMap from "./example/limitZoomMap";
 import AdaptiveAreaMap from "./example/adaptiveAreaMap"; 
 import SwitchLayers from "./example/switchLayers"; 
 import StaticMap from "./example/staticMap"; 
+import VectorMap from "./example/vectorMap"; 
 // 地图工具
 const mapList = [
+  {
+    name: "矢量地图",
+    component: VectorMap,
+  },
   {
     name: "静态地图",
     component: StaticMap,

@@ -10,6 +10,7 @@ function App() {
       <div>
         {/* 顶部导航栏，保持不变 */}
         {/* <Navbar /> */}
+        {/* <h1 className="head">刚好的工具集合</h1> */}
 
         {/* 路由切换区域 */}
         <Routes>

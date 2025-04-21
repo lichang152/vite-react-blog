@@ -9,8 +9,18 @@ import AdaptiveAreaMap from "./example/adaptiveAreaMap";
 import SwitchLayers from "./example/switchLayers"; 
 import StaticMap from "./example/staticMap"; 
 import VectorMap from "./example/vectorMap"; 
+import GetAllLoadFeatures from "./example/getAllLoadFeatures"; 
+import CoordinateTransFormMap from "./example/coordinateTransFormMap"; 
 // 地图工具
 const mapList = [
+  {
+    name: "坐标转换",
+    component: CoordinateTransFormMap,
+  },
+  {
+    name: "获取加载后的所有feature",
+    component: GetAllLoadFeatures,
+  },
   {
     name: "矢量地图",
     component: VectorMap,

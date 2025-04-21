@@ -7,8 +7,8 @@ import OSM from "ol/source/OSM";
 import Vector from "ol/layer/Vector";
 import VectorSource from "ol/source/Vector";
 import GeoJSON from "ol/format/GeoJSON";
-// import geojson from "../../../json/line-samples.geojson";
-
+import { Style } from "ol/style";
+import { Stroke } from "ol/style";
 let map: Map | null = null;
 function MapView() {
   useEffect(() => {
@@ -24,6 +24,13 @@ function MapView() {
           source: new OSM(),
         }),
         new Vector({
+          // 设置样式，颜色为红色，线条粗细为1个像素
+          style: new Style({
+            stroke: new Stroke({
+              color: "red",
+              width: 1,
+            }),
+          }),
           source: new VectorSource({
             url: "public/json/line-samples.geojson", // 地图来源
             format: new GeoJSON(), // 数据格式

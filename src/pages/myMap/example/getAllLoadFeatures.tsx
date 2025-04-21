@@ -18,7 +18,7 @@ function MapView() {
     });
     const vectorLayer = new Vector({
       source: new VectorSource({
-        url: "public/json/line-samples.geojson", // 地图来源
+        url: "json/line-samples.geojson", // 地图来源
         format: new GeoJSON(), // 数据格式
       }),
     });

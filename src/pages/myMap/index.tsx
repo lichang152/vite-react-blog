@@ -1,23 +1,43 @@
 import { useEffect, useState } from "react";
 
-import SwapMap from "./example/swapMap"; 
-import NavigationMap from "./example/navigationMap"; 
-import Map4326 from "./example/map4326"; 
-import LimitRangeMap from "./example/limitRangeMap"; 
-import LimitZoomMap from "./example/limitZoomMap"; 
-import AdaptiveAreaMap from "./example/adaptiveAreaMap"; 
-import SwitchLayers from "./example/switchLayers"; 
-import StaticMap from "./example/staticMap"; 
-import VectorMap from "./example/vectorMap"; 
-import GetAllLoadFeatures from "./example/getAllLoadFeatures"; 
-import CoordinateTransFormMap from "./example/coordinateTransFormMap"; 
-import LayerManageMap from "./example/layerManageMap"; 
-import TitleDebugMap from "./example/titleDebugMap"; 
-import LayersAndResolution from "./example/layersAndResolution"; 
-import OverlayMap from "./example/overlayMap"; 
-import FeatureMap from "./example/featureMap"; 
+import SwapMap from "./example/swapMap";
+import NavigationMap from "./example/navigationMap";
+import Map4326 from "./example/map4326";
+import LimitRangeMap from "./example/limitRangeMap";
+import LimitZoomMap from "./example/limitZoomMap";
+import AdaptiveAreaMap from "./example/adaptiveAreaMap";
+import SwitchLayers from "./example/switchLayers";
+import StaticMap from "./example/staticMap";
+import VectorMap from "./example/vectorMap";
+import GetAllLoadFeatures from "./example/getAllLoadFeatures";
+import CoordinateTransFormMap from "./example/coordinateTransFormMap";
+import LayerManageMap from "./example/layerManageMap";
+import TitleDebugMap from "./example/titleDebugMap";
+import LayersAndResolution from "./example/layersAndResolution";
+import OverlayMap from "./example/overlayMap";
+import FeatureMap from "./example/featureMap";
+import StyleFunctionMap from "./example/styleFunctionMap";
+import SingecliclMap from "./example/singecliclMap";
+import CommonEventsMap from "./example/commonEventsMap";
+import CustomEvents from "./example/customEvents";
 // 地图工具
 const mapList = [
+  {
+    name: "自定义事件",
+    component: CustomEvents,
+  },
+  {
+    name: "地图常用事件",
+    component: CommonEventsMap,
+  },
+  {
+    name: "点击事件",
+    component: SingecliclMap,
+  },
+  {
+    name: "应用StyleFunction",
+    component: StyleFunctionMap,
+  },
   {
     name: "应用featureMap",
     component: FeatureMap,

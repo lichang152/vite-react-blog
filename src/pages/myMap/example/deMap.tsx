@@ -11,13 +11,12 @@ function MapView() {
       center: [0, 0],
       zoom: 2,
     });
+    const osmLayer = new TileLayer({
+      source: new OSM(),
+    });
     map = new Map({
       target: "map",
-      layers: [
-        new TileLayer({
-          source: new OSM(),
-        }),
-      ],
+      layers: [osmLayer],
       view,
     });
 

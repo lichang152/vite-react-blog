@@ -20,8 +20,23 @@ import StyleFunctionMap from "./example/styleFunctionMap";
 import SingecliclMap from "./example/singecliclMap";
 import CommonEventsMap from "./example/commonEventsMap";
 import CustomEvents from "./example/customEvents";
+import InteractionMap from "./example/interactionMap";
+import DrawALineMap from "./example/drawALineMap";
+import ControlsOverviewMap from "./example/controlsOverviewMap";
 // 地图工具
 const mapList = [
+  {
+    name: "控件概览",
+    component: ControlsOverviewMap,
+  },
+  {
+    name: "绘制一条线",
+    component: DrawALineMap,
+  },
+  {
+    name: "地图互动",
+    component: InteractionMap,
+  },
   {
     name: "自定义事件",
     component: CustomEvents,

@@ -16,12 +16,16 @@ let map: Map | null = null;
 // 创建3个图层
 const osmLayer = new TileLayer({
   source: new OSM(),
+  // 必须设置zIndex，否则会出现图层顺序不正确的问题,使用ZIndex也会获取underfound
+  zIndex: 0, // 显式设置初始值
 });
 const pointLayer = new Vector({
   source: new VectorSource(),
+  zIndex: 1, // 显式设置初始值
 });
 const circleLayer = new Vector({
   source: new VectorSource(),
+  zIndex: 2, // 显式设置初始值
 });
 function MapView() {
   useEffect(() => {
@@ -77,15 +81,19 @@ function MapView() {
 
   const radioChange: RadioGroupProps["onChange"] = (e) => {
     const value = e.target.value;
-    console.info('测试00',value,osmLayer.getZIndex(),pointLayer.getZIndex())
+    console.log("测试00", circleLayer.getZIndex());
     if (value === 1) {
+      osmLayer.setZIndex(3);
+      circleLayer.setZIndex((circleLayer.getZIndex() ?? 0) - 1);
+      pointLayer.setZIndex((pointLayer.getZIndex() ?? 0) - 1);
+    } else if (value === 2) {
       circleLayer.setZIndex(3);
       osmLayer.setZIndex((osmLayer.getZIndex() ?? 0) - 1);
       pointLayer.setZIndex((pointLayer.getZIndex() ?? 0) - 1);
-    } else if (value === 2) {
-    //   circleLayer.setZIndex((circleLayer.getZIndex() ?? 0) + 1);
     } else {
-    //   pointLayer.setZIndex((pointLayer.getZIndex() ?? 0) + 1);
+      pointLayer.setZIndex(3);
+      osmLayer.setZIndex((osmLayer.getZIndex() ?? 0) - 1);
+      circleLayer.setZIndex((circleLayer.getZIndex() ?? 0) - 1);
     }
   };
   return (

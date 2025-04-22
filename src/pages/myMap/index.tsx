@@ -12,8 +12,28 @@ import VectorMap from "./example/vectorMap";
 import GetAllLoadFeatures from "./example/getAllLoadFeatures"; 
 import CoordinateTransFormMap from "./example/coordinateTransFormMap"; 
 import LayerManageMap from "./example/layerManageMap"; 
+import TitleDebugMap from "./example/titleDebugMap"; 
+import LayersAndResolution from "./example/layersAndResolution"; 
+import OverlayMap from "./example/overlayMap"; 
+import FeatureMap from "./example/featureMap"; 
 // 地图工具
 const mapList = [
+  {
+    name: "应用featureMap",
+    component: FeatureMap,
+  },
+  {
+    name: "应用overlay",
+    component: OverlayMap,
+  },
+  {
+    name: "获取层级和分辨率",
+    component: LayersAndResolution,
+  },
+  {
+    name: "瓦片地图调试",
+    component: TitleDebugMap,
+  },
   {
     name: "图层管理",
     component: LayerManageMap,

@@ -23,8 +23,18 @@ import CustomEvents from "./example/customEvents";
 import InteractionMap from "./example/interactionMap";
 import DrawALineMap from "./example/drawALineMap";
 import ControlsOverviewMap from "./example/controlsOverviewMap";
+import AnimationMap from "./example/animationMap";
+import ZoomifyMap from "./example/zoomifyMap";
 // 地图工具
 const mapList = [
+  {
+    name: "放大查看(图片)",
+    component: ZoomifyMap,
+  },
+  {
+    name: "动画",
+    component: AnimationMap,
+  },
   {
     name: "控件概览",
     component: ControlsOverviewMap,
